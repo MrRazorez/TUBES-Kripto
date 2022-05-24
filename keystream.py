@@ -39,7 +39,6 @@ class keystream :
 
         return temp
             
-
     def __lfsr_sys(self, kunci) :
         temp = ""
         temp += kunci[len(kunci)-1]
