@@ -4,6 +4,7 @@ from random import randint
 class keystream :
     def __init__(self) -> None :
         self.U = self.__key_gen()
+        self.IV = gen_bin.hek_conv(randint(1, 15))
         self.lfsr = self.__lfsr_sys(self.U)
 
     def __key_gen(self) :
