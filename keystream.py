@@ -1,4 +1,3 @@
-from cgi import test
 import gen_bin
 from random import randint
 
