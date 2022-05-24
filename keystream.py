@@ -4,12 +4,7 @@ from random import randint
 class keystream :
     def __init__(self) -> None :
         self.key_lfsr = self.__key_gen()
-        self.public_key = []
-        self.private_key = []
-        self.plaintext = "bola dunia"
-        self.chipertext = ""
         self.lfsr = self.__lfsr_sys(self.key_lfsr)
-        self.__key_gen_primes()
 
     def __key_gen(self) :
         temp = randint(1, 15)
