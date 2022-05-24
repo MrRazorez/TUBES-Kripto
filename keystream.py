@@ -26,6 +26,19 @@ class keystream :
 
         return kunci
 
+    def __pecah(self, kata) :
+        temp = ""
+        i = 0
+        j = 4
+        
+        while j <= len(kata) :
+            temp += gen_bin.hek_conv(gen_bin.bin_conv(kata[i:j]))
+            i += 4
+            j += 4
+
+        return temp
+            
+
     def __lfsr_sys(self, kunci) :
         temp = ""
         temp += kunci[len(kunci)-1]
@@ -36,5 +49,5 @@ class keystream :
             temp += kunci[len(kunci)-1]
             kunci = self.__gen_lfsr(kunci)
             i += 1
-
-        return temp
+        
+        return self.__pecah(temp)
