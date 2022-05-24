@@ -3,16 +3,17 @@ from random import randint
 
 class keystream :
     def __init__(self) -> None :
-        self.key_lfsr = self.__key_gen()
-        self.lfsr = self.__lfsr_sys(self.key_lfsr)
+        self.U = self.__key_gen()
+        self.lfsr = self.__lfsr_sys(self.U)
 
     def __key_gen(self) :
-        temp = randint(1, 15)
+        temp = randint(1, 255)
+        temp += randint(1, 255)
         temp = gen_bin.bin_conv(temp)
 
-        if len(temp) < 4 :
+        if len(temp) < 16 :
             tmp = ""
-            for i in range(4-len(temp)) :
+            for i in range(16-len(temp)) :
                 tmp += "0"
 
             temp = tmp+temp
@@ -27,6 +28,8 @@ class keystream :
 
     def __lfsr_sys(self, kunci) :
         temp = ""
+        temp += kunci[len(kunci)-1]
+        kunci = self.__gen_lfsr(kunci)
         pegang = kunci
         i = 0
         while kunci != pegang or i == 0 :
