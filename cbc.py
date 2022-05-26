@@ -1,4 +1,3 @@
-from re import I
 from gen_bin import hek_conv
 from keystream import *
 
