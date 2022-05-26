@@ -50,7 +50,6 @@ def __wrap_right(karakter) :
 
 def enkripsi(plain, K, IV) :
     plain_hex = __plainHex(plain)
-    print(plain_hex)
     temp = ""
 
     i = 0
@@ -63,12 +62,10 @@ def enkripsi(plain, K, IV) :
         i += 1
         if i == len(K) :
             i %= len(K)
-    print(temp)
 
     return temp
 
 def dekripsi(chiper, K, IV) :
-    print(chiper)
     temp = ""
 
     i = 0
@@ -81,6 +78,5 @@ def dekripsi(chiper, K, IV) :
         i += 1
         if i == len(K) :
             i %= len(K)
-    print(temp)
 
     return temp
