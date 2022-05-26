@@ -3,17 +3,6 @@ from keystream import *
 
 ambilKey = keystream()
 
-def __empatbit(teks) :
-    if len(teks) < 4 :
-        tp = ""
-        for i in range(4-len(teks)) :
-            tp += "0"
-
-        teks = tp+teks
-
-    return teks
-
-
 def __plainHex(teks) :
     temp = ""
     for i in teks :
