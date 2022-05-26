@@ -1,7 +1,7 @@
-from gen_bin import hek_conv
-from keystream import *
+import gen_bin
+import keystream
 
-ambilKey = keystream()
+ambilKey = keystream.keystream()
 
 def __plainHex(teks) :
     temp = ""
