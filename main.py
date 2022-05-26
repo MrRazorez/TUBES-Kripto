@@ -2,7 +2,7 @@ import cbc
 import lsb
 
 if __name__ == "__main__" :
-    teks = "hello, world!!"
+    teks = "SPY X FAMILY adalah sebuah serial anime ternama di Jepang"
     print(teks)
     coba = cbc.enkripsi(teks, cbc.ambilKey.lfsr, cbc.ambilKey.IV)
     print(coba)
