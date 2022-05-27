@@ -66,6 +66,7 @@ def sisip(data, gbr):
 	sisipPesan(newPicture, data)
 
 	namaNewPicture = input("Nama file output gambar (dengan ekstensi) : ")
+	namaNewPicture = "tempat_gambar/"+namaNewPicture
 	newPicture.save(namaNewPicture, str(namaNewPicture.split(".")[1].upper()))
 
 def ekstraksi(gbr):
